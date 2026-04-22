@@ -4,16 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT SHOTCUT PANEL I.T</title>
+    <title>IT SHORTCUT PANEL - ROYAL CRYSTAL EDITION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --success: #2ecc71;
-            --danger: #ff7675;
+            --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 70%, #fcf6ba 100%);
+            --purple-glass: rgba(20, 0, 40, 0.4);
+            --border-glass: rgba(255, 255, 255, 0.2);
+            --success: #00ff88;
+            --danger: #ff4d4d;
         }
 
         body {
-            font-family: 'Inter', 'Segoe UI', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            /* Menggunakan background asli Anda */
             background-image: url('https://i.postimg.cc/yYKvcTw4/4f9e5f02-868f-4ca0-bd73-719306220ad0.jpg') !important;
             background-size: cover !important;
             background-position: center !important;
@@ -22,6 +26,19 @@
             padding: 20px;
             color: white;
             min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* EFEK GLITTER PARTIKEL HALUS */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+            background-size: 70px 70px;
+            opacity: 0.12;
+            z-index: -1;
+            pointer-events: none;
         }
 
         #main-menu {
@@ -29,168 +46,207 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 80vh;
+            min-height: 90vh;
         }
 
+        /* AREA JUDUL DENGAN EFEK BLUR KRISTAL */
         .menu-title {
-            color: white;
-            text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            padding: 30px 60px;
+            background: rgba(20, 0, 40, 0.3);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .menu-title h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            /* Triple shadow agar teks terbaca sangat jelas */
+            filter: drop-shadow(0 2px 2px rgba(0,0,0,1)) 
+                    drop-shadow(0 4px 10px rgba(0,0,0,0.9))
+                    drop-shadow(0 0 25px rgba(184, 134, 11, 0.4));
+        }
+
+        .menu-title p {
+            color: #fff;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px #000;
+            margin-top: 10px;
+            letter-spacing: 2px;
         }
 
         .grid-menu {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             width: 100%;
-            max-width: 1100px;
+            max-width: 1150px;
         }
 
+        /* CARD MENU GLASSMORPHISM */
         .menu-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 24px;
+            background: var(--purple-glass);
+            padding: 50px 30px;
+            border-radius: 28px;
             text-align: center;
             cursor: pointer;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
         }
 
         .menu-card:hover {
-            transform: translateY(-10px);
-            background: white;
+            transform: translateY(-15px);
+            background: rgba(75, 0, 130, 0.3);
+            border-color: rgba(252, 246, 186, 0.7);
+            box-shadow: 0 20px 50px rgba(184, 134, 11, 0.4);
         }
 
         .menu-card h3 {
-            margin: 15px 0 8px;
-            color: #764ba2;
+            margin: 15px 0 10px;
+            color: #fcf6ba;
             font-weight: 800;
-            font-size: 18px;
+            font-size: 22px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px #000;
+        }
+
+        .menu-card p {
+            color: #ffffff;
+            font-weight: 600;
+            text-shadow: 1px 1px 5px #000;
         }
 
         .icon {
-            font-size: 40px;
+            font-size: 60px;
             display: block;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
         }
 
+        /* CONTAINER ALAT */
         .container {
             display: none;
-            max-width: 1150px;
-            margin: 20px auto;
-            background: rgba(0, 0, 0, 0.75);
-            padding: 40px;
-            border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            animation: fadeIn 0.4s ease;
+            max-width: 1200px;
+            margin: 30px auto;
+            background: rgba(10, 0, 20, 0.75);
+            padding: 45px;
+            border-radius: 35px;
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(252, 246, 186, 0.2);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.4s ease-out;
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         .btn-back {
             background: #fff;
             color: #000;
             border: none;
-            padding: 10px 20px;
-            border-radius: 10px;
+            padding: 12px 25px;
+            border-radius: 12px;
             cursor: pointer;
             margin-bottom: 25px;
-            font-weight: 600;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        h2 {
-            font-size: 28px;
             font-weight: 800;
-            color: white;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+        }
+
+        .btn-back:hover { background: #fcf6ba; transform: translateX(-5px); }
+
+        header h2 {
+            font-family: 'Cinzel', serif;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 40px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
         }
 
         textarea {
             width: 100%;
-            height: 160px;
+            height: 180px;
             padding: 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #000;
+            font-weight: 600;
             border: none;
-            border-radius: 18px;
-            font-size: 15px;
-            margin-bottom: 25px;
-            outline: none;
-            background: rgba(255, 255, 255, 0.9);
-            color: #333;
+            font-family: 'Poppins', sans-serif;
             box-sizing: border-box;
+            font-size: 15px;
+            outline: none;
         }
 
         .btn-copy {
-            background: var(--primary-gradient);
-            color: white;
+            background: var(--gold-gradient);
+            color: #000;
             border: none;
-            padding: 18px 45px;
-            border-radius: 14px;
+            padding: 20px 45px;
+            border-radius: 18px;
             cursor: pointer;
-            font-weight: 700;
+            font-weight: 800;
+            font-size: 16px;
             display: block;
-            margin: 0 auto 40px auto;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            margin: 30px auto 50px auto;
+            box-shadow: 0 10px 25px rgba(184, 134, 11, 0.4);
+            transition: 0.3s;
         }
+
+        .btn-copy:hover { transform: scale(1.05); box-shadow: 0 0 25px #fcf6ba; }
 
         .table-container {
             overflow-x: auto;
-            border-radius: 18px;
-            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+        table { width: 100%; border-collapse: collapse; min-width: 800px; }
 
         th {
-            background: rgba(255, 255, 255, 0.1);
-            color: #ddd;
-            padding: 18px;
+            background: rgba(184, 134, 11, 0.2);
+            color: #fcf6ba;
+            padding: 20px;
             text-align: left;
-            font-size: 12px;
             text-transform: uppercase;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgba(252, 246, 186, 0.2);
         }
 
         td {
-            padding: 16px 20px;
+            padding: 18px 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            font-size: 14px;
-            color: #ffffff !important;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            color: #fff !important;
+            text-shadow: 1px 1px 3px #000;
         }
 
-        .bank-badge {
-            color: #a29bfe;
-            font-weight: bold;
-        }
+        .bank-badge { color: #fcf6ba; font-weight: 800; }
+        .nominal-in { color: var(--success) !important; font-weight: 800; }
+        .nominal-out { color: var(--danger) !important; font-weight: 800; }
 
-        .nominal-in {
-            color: var(--success) !important;
-            font-weight: 800;
-        }
-
-        .nominal-out {
-            color: var(--danger) !important;
-            font-weight: 800;
-        }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-thumb { background: var(--gold-gradient); border-radius: 10px; }
     </style>
 </head>
 
@@ -205,27 +261,25 @@
             <div class="menu-card" onclick="openTool('wd-container')">
                 <span class="icon">💸</span>
                 <h3>SHORTCUT WD</h3>
-                <p>Proses data Withdraw masal.</p>
+                <p>Proses data Withdraw masal cepat & akurat.</p>
             </div>
             <div class="menu-card" onclick="openTool('klikbca-container')">
                 <span class="icon">🏢</span>
                 <h3>SHORTCUT DP KLIK BCA</h3>
-                <p>Filter mutasi KlikBCA.</p>
+                <p>Filter mutasi KlikBCA format rapi.</p>
             </div>
             <div class="menu-card" onclick="openTool('mybca-container')">
                 <span class="icon">📱</span>
                 <h3>SHORTCUT DP MY BCA</h3>
-                <p>Filter mutasi format MyBCA.</p>
+                <p>Filter mutasi format MyBCA terbaru.</p>
             </div>
         </div>
     </div>
 
     <div id="wd-container" class="container">
         <button class="btn-back" onclick="backToMenu()">⬅ Kembali</button>
-        <header>
-            <h2>SHORTCUT WD IT</h2>
-        </header>
-        <textarea id="inputWD" placeholder="Tempel data WD..."></textarea>
+        <header><h2>SHORTCUT WD IT</h2></header>
+        <textarea id="inputWD" placeholder="Tempel data WD di sini..."></textarea>
         <button class="btn-copy" onclick="copyData('tableBodyWD')">✨ Salin Data WD!</button>
         <div class="table-container">
             <table>
@@ -245,10 +299,8 @@
 
     <div id="klikbca-container" class="container">
         <button class="btn-back" onclick="backToMenu()">⬅ Kembali</button>
-        <header>
-            <h2>SHORTCUT DP KLIK BCA</h2>
-        </header>
-        <textarea id="inputKlikBCA" placeholder="Tempel mutasi Klik BCA..."></textarea>
+        <header><h2>SHORTCUT DP KLIK BCA</h2></header>
+        <textarea id="inputKlikBCA" placeholder="Tempel mutasi Klik BCA di sini..."></textarea>
         <button class="btn-copy" onclick="copyData('tableBodyKlikBCA')">✨ Salin Data KLIK BCA!</button>
         <div class="table-container">
             <table>
@@ -266,9 +318,7 @@
 
     <div id="mybca-container" class="container">
         <button class="btn-back" onclick="backToMenu()">⬅ Kembali</button>
-        <header>
-            <h2>SHORTCUT DP MY BCA</h2>
-        </header>
+        <header><h2>SHORTCUT DP MY BCA</h2></header>
         <textarea id="inputMyBCA" placeholder="Tempel mutasi MyBCA di sini..."></textarea>
         <button class="btn-copy" onclick="copyData('tableBodyMyBCA')">✨ Salin Data MyBCA!</button>
         <div class="table-container">
@@ -286,16 +336,20 @@
     </div>
 
     <script>
+        /* --- SEMUA LOGIKA JAVASCRIPT TETAP SAMA DENGAN SCRIPT ASLI ANDA --- */
+        
         function openTool(id) { 
             document.getElementById('main-menu').style.display = 'none'; 
             document.getElementById(id).style.display = 'block'; 
+            window.scrollTo(0,0);
         }
+        
         function backToMenu() { 
             document.getElementById('main-menu').style.display = 'flex'; 
             document.querySelectorAll('.container').forEach(c => c.style.display = 'none'); 
         }
 
-        // --- LOGIKA WD (STABIL) ---
+        // LOGIKA WD
         const inputWD = document.getElementById('inputWD');
         const tableBodyWD = document.getElementById('tableBodyWD');
         inputWD.addEventListener('input', function() {
@@ -316,12 +370,12 @@
                 let rek = bankDataMatch ? bankDataMatch[2].trim() : "";
                 let nama = bankDataMatch ? bankDataMatch[3].replace(/\d+$/, '').trim() : "";
                 const tr = document.createElement('tr');
-                tr.innerHTML = `<td><span class="bank-badge">${bank}</span></td><td>${rek}</td><td style="color:#f1c40f;font-weight:bold">${userId}</td><td>${nama}</td><td>${nominal}</td>`;
+                tr.innerHTML = `<td><span class="bank-badge">${bank}</span></td><td>${rek}</td><td style="color:#fcf6ba;font-weight:bold">${userId}</td><td>${nama}</td><td>${nominal}</td>`;
                 tableBodyWD.appendChild(tr);
             }
         });
 
-        // --- LOGIKA KLIK BCA (STABIL) ---
+        // LOGIKA KLIK BCA
         const inputKlikBCA = document.getElementById('inputKlikBCA');
         const tableBodyKlikBCA = document.getElementById('tableBodyKlikBCA');
         inputKlikBCA.addEventListener('input', function() {
@@ -358,43 +412,31 @@
             });
         });
 
-        // --- LOGIKA MY BCA (OPTIMAL UNTUK FORMAT GAMBAR) ---
+        // LOGIKA MY BCA
         const inputMyBCA = document.getElementById('inputMyBCA');
         const tableBodyMyBCA = document.getElementById('tableBodyMyBCA');
         inputMyBCA.addEventListener('input', function() {
             const val = this.value.trim();
             if (!val) { tableBodyMyBCA.innerHTML = ""; return; }
-            
-            // Mencoba split berdasarkan PEND jika format mutasi, atau per baris jika manual
             const blocks = val.split(/PEND/g);
             tableBodyMyBCA.innerHTML = "";
-
             blocks.forEach(block => {
                 const text = block.trim();
                 if (text.length < 10) return;
-
                 let nama = "TIDAK TERDETEKSI";
                 let masuk = "";
                 let keluar = "";
-
-                // Ambil nominal (mencari angka IDR atau format uang)
                 const nominalMatch = text.match(/IDR\s*([\d,.]+)/) || text.match(/([\d,]{5,}\.00)/);
                 const nominal = nominalMatch ? nominalMatch[1] : "";
-
-                // Tentukan CR (Masuk) atau DB (Keluar)
                 if (text.includes("CR") || text.includes("TRANSFER DR")) { masuk = nominal; }
                 else if (text.includes("DB") || text.includes("TRANSFER KE")) { keluar = nominal; }
-
-                // Deteksi Nama
                 if (text.includes("TRANSFER DR")) {
                     nama = text.split("TRANSFER DR")[1].split(/IDR|IDR/)[0].trim().replace(/^\d+\s*/, '');
                 } else {
-                    // Cari nama di antara kode bank dan nominal
                     const nameRegex = /WS\d+\s+[\d.]+\s+([A-Z\s\/]+)(?=IDR|IDR)/;
                     const matchName = text.match(nameRegex);
                     if (matchName) nama = matchName[1].trim();
                 }
-
                 const tr = document.createElement('tr');
                 tr.innerHTML = `<td style="font-weight:bold">${nama}</td><td class="nominal-in">${masuk}</td><td class="nominal-out">${keluar}</td>`;
                 tableBodyMyBCA.appendChild(tr);
