@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT SHORTCUT PANEL</title>
+    <title>IT SHORTCUT PANEL - MAGICAL BLUE EDITION</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Poppins:wght@400;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Poppins:wght@400;600;700;800&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 70%, #fcf6ba 100%);
-            --purple-glass: rgba(20, 0, 40, 0.4);
-            --border-glass: rgba(255, 255, 255, 0.2);
+            --gold-gradient: linear-gradient(135deg, #d4af37 0%, #fcf6ba 45%, #b38728 70%, #fcf6ba 100%);
+            --blue-glass: rgba(10, 30, 70, 0.45);
+            --border-glass: rgba(100, 200, 255, 0.3);
             --success: #00ff88;
             --danger: #ff4d4d;
+            --text-gold: #fcf6ba;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
-            /* Menggunakan background asli Anda */
             background-image: url('https://m.gettywallpapers.com/wp-content/uploads/2024/05/Cute-Anime-PC-Wallpaper-4k.jpg') !important;
             background-size: cover !important;
             background-position: center !important;
@@ -31,7 +31,6 @@
             overflow-x: hidden;
         }
 
-        /* EFEK GLITTER PARTIKEL HALUS */
         body::before {
             content: "";
             position: fixed;
@@ -39,9 +38,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: radial-gradient(circle, #fff 1px, transparent 1px);
-            background-size: 70px 70px;
-            opacity: 0.12;
+            background-image: radial-gradient(circle, #8ac 1px, transparent 1px);
+            background-size: 80px 80px;
+            opacity: 0.15;
             z-index: -1;
             pointer-events: none;
         }
@@ -54,133 +53,171 @@
             min-height: 90vh;
         }
 
-        /* AREA JUDUL DENGAN EFEK BLUR KRISTAL */
         .menu-title {
             text-align: center;
             margin-bottom: 50px;
             padding: 30px 60px;
-            background: rgba(20, 0, 40, 0.3);
-            border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            background: var(--blue-glass);
+            border-radius: 20px;
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            box-shadow: 0 15px 50px rgba(0, 30, 70, 0.7);
+            position: relative;
+        }
+
+        .menu-title::before,
+        .menu-title::after {
+            content: '♦';
+            position: absolute;
+            color: #00dfff;
+            font-size: 20px;
+            text-shadow: 0 0 10px #00dfff;
+        }
+
+        .menu-title::before {
+            top: 10px;
+            left: 10px;
+        }
+
+        .menu-title::after {
+            bottom: 10px;
+            right: 10px;
         }
 
         .menu-title h1 {
             font-family: 'Cinzel', serif;
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin: 0;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            /* Triple shadow agar teks terbaca sangat jelas */
-            filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 1)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 25px rgba(184, 134, 11, 0.4));
+            letter-spacing: 4px;
+            font-weight: 900;
+            filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 1)) drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
         }
 
         .menu-title p {
             color: #fff;
             font-weight: 700;
-            text-shadow: 2px 2px 8px #000;
+            text-shadow: 2px 2px 10px #000;
             margin-top: 10px;
             letter-spacing: 2px;
+            font-size: 1.1rem;
         }
 
         .grid-menu {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
             width: 100%;
-            max-width: 1150px;
+            max-width: 1200px;
         }
 
-        /* CARD MENU GLASSMORPHISM */
         .menu-card {
-            background: var(--purple-glass);
+            background: var(--blue-glass);
             padding: 50px 30px;
-            border-radius: 28px;
+            border-radius: 15px;
             text-align: center;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid var(--border-glass);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid rgba(212, 175, 55, 0.3);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 15px 40px rgba(0, 10, 30, 0.6);
             position: relative;
             overflow: hidden;
         }
 
+        .menu-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #00dfff 0%, transparent 70%);
+            opacity: 0.5;
+        }
+
         .menu-card:hover {
-            transform: translateY(-15px);
-            background: rgba(75, 0, 130, 0.3);
-            border-color: rgba(252, 246, 186, 0.7);
-            box-shadow: 0 20px 50px rgba(184, 134, 11, 0.4);
+            transform: translateY(-15px) scale(1.02);
+            background: rgba(10, 50, 100, 0.3);
+            border-color: rgba(0, 223, 255, 0.8);
+            box-shadow: 0 0 50px rgba(0, 223, 255, 0.6);
         }
 
         .menu-card h3 {
             margin: 15px 0 10px;
-            color: #fcf6ba;
+            color: var(--text-gold);
             font-weight: 800;
-            font-size: 22px;
+            font-size: 24px;
             text-transform: uppercase;
             text-shadow: 2px 2px 10px #000;
+            letter-spacing: 1px;
         }
 
         .menu-card p {
             color: #ffffff;
             font-weight: 600;
             text-shadow: 1px 1px 5px #000;
+            opacity: 0.9;
         }
 
         .icon {
-            font-size: 60px;
+            font-size: 65px;
             display: block;
             margin-bottom: 15px;
-            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.8));
         }
 
-        /* CONTAINER ALAT */
         .container {
             display: none;
             max-width: 1200px;
             margin: 30px auto;
-            background: rgba(10, 0, 20, 0.75);
+            background: rgba(5, 15, 40, 0.8);
             padding: 45px;
-            border-radius: 35px;
+            border-radius: 20px;
             backdrop-filter: blur(25px);
-            border: 1px solid rgba(252, 246, 186, 0.2);
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8);
-            animation: fadeIn 0.4s ease-out;
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 25px 70px rgba(0, 5, 20, 0.9);
+            animation: fadeIn 0.5s ease-out;
+            position: relative;
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: scale(0.95);
+                transform: translateY(20px);
             }
 
             to {
                 opacity: 1;
-                transform: scale(1);
+                transform: translateY(0);
             }
         }
 
         .btn-back {
-            background: #fff;
-            color: #000;
-            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
             padding: 12px 25px;
-            border-radius: 12px;
+            border-radius: 8px;
             cursor: pointer;
             margin-bottom: 25px;
-            font-weight: 800;
+            font-weight: 700;
             transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .btn-back:hover {
-            background: #fcf6ba;
+            background: #fff;
+            color: #000;
             transform: translateX(-5px);
         }
 
@@ -190,24 +227,31 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-align: center;
-            font-size: 30px;
+            font-size: 32px;
             margin-bottom: 40px;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+            letter-spacing: 2px;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
         }
 
         textarea {
             width: 100%;
             height: 180px;
             padding: 20px;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.95);
-            color: #000;
-            font-weight: 600;
-            border: none;
+            border-radius: 12px;
+            background: rgba(0, 5, 15, 0.7);
+            color: #fff;
+            font-weight: 500;
+            border: 1px solid var(--border-glass);
             font-family: 'Poppins', sans-serif;
             box-sizing: border-box;
             font-size: 15px;
             outline: none;
+            transition: 0.3s;
+        }
+
+        textarea:focus {
+            border-color: rgba(0, 223, 255, 0.8);
+            box-shadow: 0 0 15px rgba(0, 223, 255, 0.4);
         }
 
         .btn-copy {
@@ -215,26 +259,29 @@
             color: #000;
             border: none;
             padding: 20px 45px;
-            border-radius: 18px;
+            border-radius: 10px;
             cursor: pointer;
-            font-weight: 800;
-            font-size: 16px;
+            font-weight: 900;
+            font-size: 17px;
             display: block;
             margin: 30px auto 50px auto;
-            box-shadow: 0 10px 25px rgba(184, 134, 11, 0.4);
-            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .btn-copy:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px #fcf6ba;
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 15px 40px rgba(252, 246, 186, 0.8);
         }
 
         .table-container {
             overflow-x: auto;
-            border-radius: 20px;
-            background: rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
         }
 
         table {
@@ -244,14 +291,15 @@
         }
 
         th {
-            background: rgba(184, 134, 11, 0.2);
-            color: #fcf6ba;
-            padding: 20px;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--text-gold);
+            padding: 22px 20px;
             text-align: left;
             text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 1px;
-            border-bottom: 1px solid rgba(252, 246, 186, 0.2);
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
         }
 
         td {
@@ -259,29 +307,46 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             color: #fff !important;
             text-shadow: 1px 1px 3px #000;
+            font-weight: 500;
+        }
+
+        tbody tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        tbody tr:hover {
+            background: rgba(0, 223, 255, 0.05);
         }
 
         .bank-badge {
-            color: #fcf6ba;
+            color: var(--text-gold);
             font-weight: 800;
+            text-transform: uppercase;
         }
 
         .nominal-in {
             color: var(--success) !important;
             font-weight: 800;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
         }
 
         .nominal-out {
             color: var(--danger) !important;
             font-weight: 800;
+            text-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
         }
 
         ::-webkit-scrollbar {
             width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 5, 20, 0.5);
         }
 
         ::-webkit-scrollbar-thumb {
-            background: var(--gold-gradient);
+            background: linear-gradient(180deg, #d4af37, #00dfff);
             border-radius: 10px;
         }
     </style>
@@ -296,7 +361,7 @@
         </div>
         <div class="grid-menu">
             <div class="menu-card" onclick="openTool('wd-container')">
-                <span class="icon">💸</span>
+                <span class="icon">💰</span>
                 <h3>SHORTCUT WD</h3>
                 <p>Proses data Withdraw masal cepat & akurat.</p>
             </div>
@@ -313,6 +378,7 @@
         </div>
     </div>
 
+    <!-- SHORTCUT WD -->
     <div id="wd-container" class="container">
         <button class="btn-back" onclick="backToMenu()">⬅ Kembali</button>
         <header>
@@ -336,6 +402,7 @@
         </div>
     </div>
 
+    <!-- SHORTCUT DP KLIK BCA -->
     <div id="klikbca-container" class="container">
         <button class="btn-back" onclick="backToMenu()">⬅ Kembali</button>
         <header>
@@ -357,6 +424,7 @@
         </div>
     </div>
 
+    <!-- SHORTCUT DP MY BCA -->
     <div id="mybca-container" class="container">
         <button class="btn-back" onclick="backToMenu()">⬅ Kembali</button>
         <header>
@@ -379,35 +447,39 @@
     </div>
 
     <script>
-        /* --- SEMUA LOGIKA JAVASCRIPT TETAP SAMA DENGAN SCRIPT ASLI ANDA --- */
-        
-        function openTool(id) { 
-            document.getElementById('main-menu').style.display = 'none'; 
-            document.getElementById(id).style.display = 'block'; 
-            window.scrollTo(0,0);
-        }
-        
-        function backToMenu() { 
-            document.getElementById('main-menu').style.display = 'flex'; 
-            document.querySelectorAll('.container').forEach(c => c.style.display = 'none'); 
+        // =============================================
+        // NAVIGASI
+        // =============================================
+        function openTool(id) {
+            document.getElementById('main-menu').style.display = 'none';
+            document.getElementById(id).style.display = 'block';
+            window.scrollTo(0, 0);
         }
 
-        // LOGIKA WD
+        function backToMenu() {
+            document.getElementById('main-menu').style.display = 'flex';
+            document.querySelectorAll('.container').forEach(c => c.style.display = 'none');
+        }
+
+        // =============================================
+        // LOGIKA WD (tidak diubah)
+        // =============================================
         const inputWD = document.getElementById('inputWD');
         const tableBodyWD = document.getElementById('tableBodyWD');
-        inputWD.addEventListener('input', function() {
+
+        inputWD.addEventListener('input', function () {
             const val = this.value.trim();
             if (!val) { tableBodyWD.innerHTML = ""; return; }
             const parts = val.split(/Withdraw/g);
             tableBodyWD.innerHTML = "";
             for (let i = 0; i < parts.length - 1; i++) {
                 let currentPart = parts[i].trim();
-                let nextPart = parts[i+1].trim();
+                let nextPart = parts[i + 1].trim();
                 let lines = currentPart.split('\n');
-                let userId = lines[lines.length - 1].trim().replace(/^\d+/, '').replace(/"/g, ''); 
+                let userId = lines[lines.length - 1].trim().replace(/^\d+/, '').replace(/"/g, '');
                 let nominalMatch = nextPart.match(/(\d{1,3}(,\d{3})+)/);
                 let nominal = nominalMatch ? nominalMatch[1] : "";
-                let flatNextPart = nextPart.replace(/\n/g, ' '); 
+                let flatNextPart = nextPart.replace(/\n/g, ' ');
                 let bankDataMatch = flatNextPart.match(/G\d+[\s,]*([^,]+),\s*([\d\*]+),\s*([^0-9\t\n\r]+)/);
                 let bank = bankDataMatch ? bankDataMatch[1].trim() : "";
                 let rek = bankDataMatch ? bankDataMatch[2].trim() : "";
@@ -418,85 +490,178 @@
             }
         });
 
-        // LOGIKA KLIK BCA
+        // =============================================
+        // LOGIKA KLIK BCA (DIPERBAIKI)
+        // =============================================
         const inputKlikBCA = document.getElementById('inputKlikBCA');
         const tableBodyKlikBCA = document.getElementById('tableBodyKlikBCA');
-        inputKlikBCA.addEventListener('input', function() {
+
+        inputKlikBCA.addEventListener('input', function () {
             const val = this.value.trim();
             if (!val) { tableBodyKlikBCA.innerHTML = ""; return; }
-            const blocks = val.split(/PEND/g);
             tableBodyKlikBCA.innerHTML = "";
+
+            // Pisah tiap transaksi berdasarkan baris tanggal (misal: "22/04/2026")
+            const blocks = val.split(/\n(?=\d{1,2}\/\d{2}\/\d{4})/);
+
             blocks.forEach(block => {
                 const cleanBlock = block.trim();
-                if (cleanBlock.length < 15) return;
-                const lines = cleanBlock.split('\n').map(l => l.trim());
+                if (cleanBlock.length < 10) return;
+
+                const lines = cleanBlock.split('\n').map(l => l.trim()).filter(l => l.length > 0);
                 let nama = "TIDAK TERDETEKSI";
-                let masuk = ""; let keluar = "";
+                let masuk = "";
+                let keluar = "";
+
+                // Cari baris CR atau DB
                 const typeIndex = lines.findIndex(l => l === "CR" || l === "DB");
-                if (typeIndex !== -1) {
-                    const tipe = lines[typeIndex];
-                    if (tipe === "CR") { masuk = lines[typeIndex - 1]; } else { keluar = lines[typeIndex - 1]; }
-                    for (let i = 0; i < typeIndex - 1; i++) {
-                        let text = lines[i];
-                        if (text.includes("TRANSFER DR") || text.includes("TRANSFER KE")) {
-                            let keyword = text.includes("TRANSFER DR") ? "TRANSFER DR" : "TRANSFER KE";
-                            nama = text.split(keyword)[1].trim().replace(/^\d+\s*/, '');
+                if (typeIndex === -1) return;
+
+                const tipe = lines[typeIndex];
+                // Nominal ada satu baris sebelum CR/DB
+                const nominal = lines[typeIndex - 1] || "";
+                if (tipe === "CR") masuk = nominal;
+                else keluar = nominal;
+
+                // Deteksi nama dari berbagai format:
+                for (let i = 0; i < typeIndex; i++) {
+                    const text = lines[i];
+
+                    // Format 1: SWITCHING DB TRF [NAMA] ...
+                    // Contoh: SWITCHING DB TRF MUHAMMAD IQBAL 002 MYBCA 95271
+                    if (/^SWITCHING\s+(DB|CR)\s+TRF\s+/i.test(text)) {
+                        const m = text.match(/^SWITCHING\s+(?:DB|CR)\s+TRF\s+(.+?)(?:\s+\d{3}\s+|\s+MYBCA|\s+BCA|$)/i);
+                        if (m) { nama = m[1].trim(); break; }
+                    }
+
+                    // Format 2: SWITCHING DB BIAYA TXN KE [NAMA] ...
+                    // Contoh: SWITCHING DB BIAYA TXN KE 002 MUHAMMAD IQBAL MYBCA 95271
+                    if (/^SWITCHING\s+DB\s+BIAYA/i.test(text)) {
+                        const m = text.match(/BIAYA\s+TXN\s+KE\s+\d+\s+(.+?)(?:\s+MYBCA|\s+BCA|$)/i);
+                        if (m) { nama = m[1].trim(); break; }
+                    }
+
+                    // Format 3: TRSF E-BANKING CR/DB ... WS##### [NAMA]
+                    // Contoh: TRSF E-BANKING CR 2204/FTSCY/WS95031 201000.00 SHINTA PRAMISTA SA
+                    if (/^TRSF E-BANKING/i.test(text) && /WS\d+/.test(text)) {
+                        const m = text.match(/WS\d+\s+[\d.]+\s+(.+?)$/i);
+                        if (m) { nama = m[1].trim(); break; }
+                    }
+
+                    // Format 4: TRSF E-BANKING CR/DB [kode] [NAMA]
+                    // Contoh: TRSF E-BANKING CR 04/22 ZP7U1 ANDIK SYAFFUDIN
+                    if (/^TRSF E-BANKING/i.test(text) && !/WS\d+/.test(text)) {
+                        const m = text.match(/TRSF\s+E-BANKING\s+(?:CR|DB)\s+[\d\/]+\s+\S+\s+(.+?)$/i);
+                        if (m) { nama = m[1].trim(); break; }
+                    }
+
+                    // Format 5: TRANSFER DR / TRANSFER KE [NAMA]
+                    if (text.includes("TRANSFER DR") || text.includes("TRANSFER KE")) {
+                        const keyword = text.includes("TRANSFER DR") ? "TRANSFER DR" : "TRANSFER KE";
+                        nama = text.split(keyword)[1].trim().replace(/^\d+\s*/, '');
+                        break;
+                    }
+
+                    // Format 6: TRFDN-[NAMA]
+                    if (text.includes("TRFDN-")) {
+                        nama = text.replace("TRFDN-", "").trim();
+                        break;
+                    }
+
+                    // Format 7: fallback — baris setelah kode "0000"/"0998" yang berisi nama
+                    if (text.length > 3 && !text.match(/^\d+$/) && !text.match(/^\d{1,3}(,\d{3})*\.\d{2}$/) && !text.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
+                        if (lines[i + 1] === "0000" || lines[i + 1] === "0998") {
+                            nama = text;
                             break;
-                        }
-                        if (text.includes("TRFDN-")) { nama = text.replace("TRFDN-", "").trim(); break; }
-                        if (text.length > 3 && !text.match(/^\d+$/) && !text.match(/^\d+\.\d+$/)) {
-                            if (lines[i+1] === "0000") { nama = text; break; }
                         }
                     }
                 }
+
                 const tr = document.createElement('tr');
                 tr.innerHTML = `<td style="font-weight:bold">${nama}</td><td class="nominal-in">${masuk}</td><td class="nominal-out">${keluar}</td>`;
                 tableBodyKlikBCA.appendChild(tr);
             });
         });
 
-        // LOGIKA MY BCA
+        // =============================================
+        // LOGIKA MY BCA (DIPERBAIKI)
+        // =============================================
         const inputMyBCA = document.getElementById('inputMyBCA');
         const tableBodyMyBCA = document.getElementById('tableBodyMyBCA');
-        inputMyBCA.addEventListener('input', function() {
+
+        inputMyBCA.addEventListener('input', function () {
             const val = this.value.trim();
             if (!val) { tableBodyMyBCA.innerHTML = ""; return; }
-            const blocks = val.split(/PEND/g);
             tableBodyMyBCA.innerHTML = "";
+
+            // Pisah tiap transaksi berdasarkan baris tanggal (misal: "22 Apr 2026")
+            const blocks = val.split(/\n(?=\d{1,2} [A-Za-z]+ \d{4})/);
+
             blocks.forEach(block => {
                 const text = block.trim();
                 if (text.length < 10) return;
+
                 let nama = "TIDAK TERDETEKSI";
                 let masuk = "";
                 let keluar = "";
-                const nominalMatch = text.match(/IDR\s*([\d,.]+)/) || text.match(/([\d,]{5,}\.00)/);
-                const nominal = nominalMatch ? nominalMatch[1] : "";
-                if (text.includes("CR") || text.includes("TRANSFER DR")) { masuk = nominal; }
-                else if (text.includes("DB") || text.includes("TRANSFER KE")) { keluar = nominal; }
-                if (text.includes("TRANSFER DR")) {
-                    nama = text.split("TRANSFER DR")[1].split(/IDR|IDR/)[0].trim().replace(/^\d+\s*/, '');
-                } else {
-                    const nameRegex = /WS\d+\s+[\d.]+\s+([A-Z\s\/]+)(?=IDR|IDR)/;
-                    const matchName = text.match(nameRegex);
-                    if (matchName) nama = matchName[1].trim();
+
+                // Ambil nominal pertama setelah "IDR" (nominal transaksi, bukan saldo)
+                const allIDR = [...text.matchAll(/IDR\s*([\d,]+\.\d{2})/g)];
+                const nominal = allIDR.length > 0 ? allIDR[0][1] : "";
+
+                // Tentukan apakah CR (masuk) atau DB (keluar)
+                const isCR = /TRSF E-BANKING CR|BI-FAST CR/i.test(text);
+                const isDB = /TRSF E-BANKING DB|BI-FAST DB/i.test(text);
+                if (isCR) masuk = nominal;
+                else if (isDB) keluar = nominal;
+
+                // ---- Deteksi Nama dari berbagai format ----
+
+                // Format 1: TRFDN-[NAMA] (transfer via ESPAY/virtual)
+                // Contoh: 2026042124569626 TRFDN-YOHANIS PANJ ESPAY DEBIT INDONE
+                if (text.includes("TRFDN-")) {
+                    const m = text.match(/TRFDN-([A-Z0-9\s]+?)(?:\s+ESPAY|\s+IDR|\t|$)/);
+                    if (m) nama = m[1].trim();
                 }
+                // Format 2: BI-FAST ... TRANSFER DR ### [NAMA]
+                // Contoh: BI-FAST CR - TANGGAL :21/04 TRANSFER DR 535 MUHAMMAD HAMDANI
+                else if (/TRANSFER DR\s+\d+/.test(text)) {
+                    const m = text.match(/TRANSFER DR\s+\d+\s+(.+?)(?:\s+IDR|\t|$)/);
+                    if (m) nama = m[1].trim();
+                }
+                // Format 3: TRSF E-BANKING ... WS##### ##### [NAMA] (dengan atau tanpa /A)
+                // Contoh: TRSF E-BANKING CR - 2104/FTSCY/WS95271 35000.00 ADI WIJAYA PRANATA
+                // Contoh: TRSF E-BANKING CR - 2104/FTSCY/WS95271 50000.00 TATANG RUSLAN /A
+                else if (/WS\d+/.test(text)) {
+                    const m = text.match(/WS\d+\s+[\d.]+\s+(.+?)(?:\s+IDR|\t|$)/);
+                    if (m) nama = m[1].trim().replace(/\s*\/A\s*$/, '').trim();
+                }
+
                 const tr = document.createElement('tr');
                 tr.innerHTML = `<td style="font-weight:bold">${nama}</td><td class="nominal-in">${masuk}</td><td class="nominal-out">${keluar}</td>`;
                 tableBodyMyBCA.appendChild(tr);
             });
         });
 
+        // =============================================
+        // FUNGSI SALIN DATA
+        // =============================================
         async function copyData(tableId) {
             const body = document.getElementById(tableId);
-            let output = "";
             const rows = body.querySelectorAll('tr');
-            if (rows.length === 0) return;
+            if (rows.length === 0) {
+                alert("⚠️ Tidak ada data untuk disalin!");
+                return;
+            }
+            let output = "";
             rows.forEach(row => {
-                const rowData = Array.from(row.querySelectorAll('td')).map(c => c.innerText.trim()).join('\t');
+                const rowData = Array.from(row.querySelectorAll('td'))
+                    .map(c => c.innerText.trim())
+                    .join('\t');
                 output += rowData + '\n';
             });
             await navigator.clipboard.writeText(output);
-            alert("✨ DATA BERHASIL DISALIN!");
+            alert("✅ DATA BERHASIL DISALIN!");
         }
     </script>
 </body>
