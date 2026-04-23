@@ -10,14 +10,10 @@
         rel="stylesheet">
     <style>
         :root {
-            /* PERUBAHAN: Gradasi Silver Metalik Mengkilap */
             --silver-gradient: linear-gradient(135deg, #cfd1d3 0%, #ffffff 45%, #9a9b9c 70%, #ffffff 100%);
             --blue-glass: rgba(10, 30, 70, 0.45);
-            --border-glass: rgba(150, 180, 255, 0.3);
             --success: #00ff88;
             --danger: #ff4d4d;
-            /* PERUBAHAN: Teks Silver */
-            --text-silver: #f0f0f0;
         }
 
         body {
@@ -63,19 +59,17 @@
             border-radius: 20px;
             border: 2px solid rgba(180, 200, 255, 0.6);
             backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
             box-shadow: 0 15px 50px rgba(0, 30, 70, 0.7), 0 0 25px rgba(200, 220, 255, 0.2);
             position: relative;
         }
 
-        /* PERUBAHAN: Warna Diamond menjadi Putih/Silver Glow */
         .menu-title::before,
         .menu-title::after {
             content: '♦';
             position: absolute;
-            color: #ffffff;
+            color: #fff;
             font-size: 20px;
-            text-shadow: 0 0 10px #ffffff;
+            text-shadow: 0 0 10px #fff;
         }
 
         .menu-title::before {
@@ -91,7 +85,6 @@
         .menu-title h1 {
             font-family: 'Cinzel', serif;
             font-size: 3.8rem;
-            /* PERUBAHAN: Teks menjadi Silver Shine */
             background: var(--silver-gradient);
             background-size: 200% auto;
             -webkit-background-clip: text;
@@ -104,14 +97,13 @@
             animation: silverShine 4s linear infinite;
         }
 
-        /* Animasi kilatan silver */
         @keyframes silverShine {
             0% {
-                background-position: -200% center;
+                background-position: -200% center
             }
 
             100% {
-                background-position: 200% center;
+                background-position: 200% center
             }
         }
 
@@ -146,7 +138,6 @@
             z-index: 0;
         }
 
-        /* PERUBAHAN: Cincin menjadi Silver */
         .menu-logo-wrap::after {
             content: '';
             position: absolute;
@@ -178,23 +169,23 @@
 
             0%,
             100% {
-                opacity: 0.5;
-                transform: translate(-50%, -50%) scale(1);
+                opacity: .5;
+                transform: translate(-50%, -50%) scale(1)
             }
 
             50% {
                 opacity: 1;
-                transform: translate(-50%, -50%) scale(1.18);
+                transform: translate(-50%, -50%) scale(1.18)
             }
         }
 
         @keyframes logoSpin {
             from {
-                transform: translate(-50%, -50%) rotate(0deg);
+                transform: translate(-50%, -50%) rotate(0deg)
             }
 
             to {
-                transform: translate(-50%, -50%) rotate(360deg);
+                transform: translate(-50%, -50%) rotate(360deg)
             }
         }
 
@@ -202,11 +193,11 @@
 
             0%,
             100% {
-                transform: translate(-50%, -50%) translateY(0px);
+                transform: translate(-50%, -50%) translateY(0px)
             }
 
             50% {
-                transform: translate(-50%, -50%) translateY(-8px);
+                transform: translate(-50%, -50%) translateY(-8px)
             }
         }
 
@@ -224,10 +215,9 @@
             border-radius: 15px;
             text-align: center;
             cursor: pointer;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all .5s cubic-bezier(.175, .885, .32, 1.275);
             border: 2px solid rgba(200, 220, 255, 0.4);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
             box-shadow: 0 15px 40px rgba(0, 10, 30, 0.6);
             position: relative;
             overflow: hidden;
@@ -240,8 +230,8 @@
             left: 0;
             width: 30px;
             height: 30px;
-            background: linear-gradient(135deg, #ffffff 0%, transparent 70%);
-            opacity: 0.4;
+            background: linear-gradient(135deg, #fff 0%, transparent 70%);
+            opacity: .4;
         }
 
         .menu-card:hover {
@@ -257,7 +247,6 @@
             font-size: 24px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            /* PERUBAHAN: Judul kartu silver chrome */
             background: var(--silver-gradient);
             background-size: 200% auto;
             -webkit-background-clip: text;
@@ -267,10 +256,10 @@
         }
 
         .menu-card p {
-            color: #ffffff;
+            color: #fff;
             font-weight: 600;
             text-shadow: 1px 1px 5px #000;
-            opacity: 0.9;
+            opacity: .9;
         }
 
         .container {
@@ -283,19 +272,19 @@
             backdrop-filter: blur(25px);
             border: 2px solid rgba(200, 220, 255, 0.4);
             box-shadow: 0 25px 70px rgba(0, 5, 20, 0.9);
-            animation: fadeIn 0.5s ease-out;
+            animation: fadeIn .5s ease-out;
             position: relative;
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(20px)
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateY(0)
             }
         }
 
@@ -308,7 +297,7 @@
             cursor: pointer;
             margin-bottom: 25px;
             font-weight: 700;
-            transition: 0.3s;
+            transition: .3s;
             text-transform: uppercase;
         }
 
@@ -343,8 +332,7 @@
         }
 
         .btn-copy {
-            /* PERUBAHAN: Tombol Copy menjadi Silver Deep */
-            background: linear-gradient(135deg, #9a9b9c 0%, #ffffff 50%, #666666 100%);
+            background: linear-gradient(135deg, #9a9b9c 0%, #fff 50%, #666 100%);
             color: #000;
             border: none;
             padding: 20px 45px;
@@ -356,7 +344,7 @@
             margin: 30px auto 50px auto;
             text-transform: uppercase;
             box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
-            transition: 0.3s;
+            transition: .3s;
         }
 
         .btn-copy:hover {
@@ -379,7 +367,7 @@
 
         th {
             background: rgba(150, 150, 150, 0.15);
-            color: #ffffff;
+            color: #fff;
             padding: 22px 20px;
             text-align: left;
             text-transform: uppercase;
@@ -392,7 +380,6 @@
             color: #fff !important;
         }
 
-        /* PERUBAHAN: Badge Bank menjadi Silver */
         .bank-badge {
             color: #cfd1d3;
             font-weight: 800;
@@ -420,7 +407,7 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #9a9b9c, #ffffff);
+            background: linear-gradient(180deg, #9a9b9c, #fff);
             border-radius: 10px;
         }
     </style>
@@ -431,24 +418,24 @@
     <div id="main-menu">
         <div class="menu-title">
             <div class="menu-logo-wrap">
-                <img src="https://i.postimg.cc/Hkmc9HGN/ad6ba5f8-90e7-4824-8590-3ffe5f722514-removebg-preview.png" alt="Logo IT Shortcut Panel">
+                <img src="https://i.postimg.cc/Hkmc9HGN/ad6ba5f8-90e7-4824-8590-3ffe5f722514-removebg-preview.png" alt="Logo">
             </div>
             <h1>SHORTCUT PANEL</h1>
             <p>Pilih Tools Shortcut Bosku!</p>
         </div>
         <div class="grid-menu">
             <div class="menu-card" onclick="openTool('wd-container')">
-                <img src="https://img.pikbest.com/png-images/20250519/golden-coin-with-dollar-symbol-and-stars_11718025.png!w700wp" style="width:85px; height:85px; object-fit:contain; display:block; margin:0 auto; filter: grayscale(1) brightness(1.5);">
+                <img src="https://img.pikbest.com/png-images/20250519/golden-coin-with-dollar-symbol-and-stars_11718025.png!w700wp" style="width:85px;height:85px;object-fit:contain;display:block;margin:0 auto;filter:grayscale(1) brightness(1.5)">
                 <h3>SHORTCUT WD IDN</h3>
                 <p>Proses data Withdraw cepat & akurat</p>
             </div>
             <div class="menu-card" onclick="openTool('klikbca-container')">
-                <img src="https://pustaka.bca.co.id/Ocean/Product/DA162B01-4C4E-4E3F-A118-84C5514F0BD8/Logo/KlikBCA-Bisnis--Logo%20(1)-min.png" style="width:95px; height:95px; object-fit:contain; display:block; margin:0 auto;">
+                <img src="https://pustaka.bca.co.id/Ocean/Product/DA162B01-4C4E-4E3F-A118-84C5514F0BD8/Logo/KlikBCA-Bisnis--Logo%20(1)-min.png" style="width:95px;height:95px;object-fit:contain;display:block;margin:0 auto">
                 <h3>SHORTCUT DP KLIK BCA</h3>
                 <p>Filter mutasi Klik BCA</p>
             </div>
             <div class="menu-card" onclick="openTool('mybca-container')">
-                <img src="https://play-lh.googleusercontent.com/ckrnc0pzN0oZgSaMQMnOYrICdBLwFTuI17MlTUp9ftyZPJ-m4K1pA3_Dz1B-1dCFVZbv" style="width:85px; height:85px; object-fit:contain; display:block; margin:0 auto;">
+                <img src="https://play-lh.googleusercontent.com/ckrnc0pzN0oZgSaMQMnOYrICdBLwFTuI17MlTUp9ftyZPJ-m4K1pA3_Dz1B-1dCFVZbv" style="width:85px;height:85px;object-fit:contain;display:block;margin:0 auto">
                 <h3>SHORTCUT DP MY BCA</h3>
                 <p>Filter mutasi MyBCA</p>
             </div>
@@ -521,140 +508,188 @@
     </div>
 
     <script>
-        // SEMUA LOGIKA TETAP SAMA PERSIS DENGAN ASLINYA
         function openTool(id) {
-            document.getElementById('main-menu').style.display = 'none';
-            document.getElementById(id).style.display = 'block';
-            window.scrollTo(0, 0);
-        }
+        document.getElementById('main-menu').style.display = 'none';
+        document.getElementById(id).style.display = 'block';
+        window.scrollTo(0, 0);
+    }
+    function backToMenu() {
+        document.getElementById('main-menu').style.display = 'flex';
+        document.querySelectorAll('.container').forEach(c => c.style.display = 'none');
+    }
 
-        function backToMenu() {
-            document.getElementById('main-menu').style.display = 'flex';
-            document.querySelectorAll('.container').forEach(c => c.style.display = 'none');
-        }
-
-        const inputWD = document.getElementById('inputWD');
+    // ===== WD IDN =====
+    document.getElementById('inputWD').addEventListener('input', function () {
+        const val = this.value.trim();
         const tableBodyWD = document.getElementById('tableBodyWD');
-        inputWD.addEventListener('input', function () {
-            const val = this.value.trim();
-            if (!val) { tableBodyWD.innerHTML = ""; return; }
-            const parts = val.split(/Withdraw/g);
-            tableBodyWD.innerHTML = "";
-            for (let i = 0; i < parts.length - 1; i++) {
-                let currentPart = parts[i].trim();
-                let nextPart = parts[i + 1].trim();
-                let lines = currentPart.split('\n');
-                let userId = lines[lines.length - 1].trim().replace(/^\d+/, '').replace(/"/g, '');
-                let nominalMatch = nextPart.match(/(\d{1,3}(,\d{3})+)/);
-                let nominal = nominalMatch ? nominalMatch[1] : "";
-                let flatNextPart = nextPart.replace(/\n/g, ' ');
-                let bankDataMatch = flatNextPart.match(/G\d+[\s,]*([^,]+),\s*([\d\*]+),\s*([^0-9\t\n\r]+)/);
-                let bank = bankDataMatch ? bankDataMatch[1].trim() : "";
-                let rek = bankDataMatch ? bankDataMatch[2].trim() : "";
-                let nama = bankDataMatch ? bankDataMatch[3].replace(/\d+$/, '').trim() : "";
-                const tr = document.createElement('tr');
-                tr.innerHTML = `<td><span class="bank-badge">${bank}</span></td><td>${rek}</td><td style="color:#ffffff;font-weight:bold">${userId}</td><td>${nama}</td><td>${nominal}</td>`;
-                tableBodyWD.appendChild(tr);
-            }
-        });
+        if (!val) { tableBodyWD.innerHTML = ""; return; }
+        const parts = val.split(/Withdraw/g);
+        tableBodyWD.innerHTML = "";
+        for (let i = 0; i < parts.length - 1; i++) {
+            let currentPart = parts[i].trim();
+            let nextPart = parts[i + 1].trim();
+            let lines = currentPart.split('\n');
+            let userId = lines[lines.length - 1].trim().replace(/^\d+/, '').replace(/"/g, '');
+            let nominalMatch = nextPart.match(/(\d{1,3}(,\d{3})+)/);
+            let nominal = nominalMatch ? nominalMatch[1] : "";
+            let flatNextPart = nextPart.replace(/\n/g, ' ');
+            let bankDataMatch = flatNextPart.match(/G\d+[\s,]*([^,]+),\s*([\d\*]+),\s*([^0-9\t\n\r]+)/);
+            let bank = bankDataMatch ? bankDataMatch[1].trim() : "";
+            let rek = bankDataMatch ? bankDataMatch[2].trim() : "";
+            let nama = bankDataMatch ? bankDataMatch[3].replace(/\d+$/, '').trim() : "";
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td><span class="bank-badge">${bank}</span></td><td>${rek}</td><td style="color:#fff;font-weight:bold">${userId}</td><td>${nama}</td><td>${nominal}</td>`;
+            tableBodyWD.appendChild(tr);
+        }
+    });
 
-        const inputKlikBCA = document.getElementById('inputKlikBCA');
+    // ===== KLIK BCA =====
+    document.getElementById('inputKlikBCA').addEventListener('input', function () {
+        const val = this.value.trim();
         const tableBodyKlikBCA = document.getElementById('tableBodyKlikBCA');
-        inputKlikBCA.addEventListener('input', function () {
-            const val = this.value.trim();
-            if (!val) { tableBodyKlikBCA.innerHTML = ""; return; }
-            tableBodyKlikBCA.innerHTML = "";
-            const blocks = val.split(/\n(?=\d{1,2}\/\d{2}\/\d{4})/);
-            blocks.forEach(block => {
-                const cleanBlock = block.trim();
-                if (cleanBlock.length < 10) return;
-                const lines = cleanBlock.split('\n').map(l => l.trim()).filter(l => l.length > 0);
-                let nama = "TIDAK TERDETEKSI";
-                let masuk = ""; let keluar = "";
-                const typeIndex = lines.findIndex(l => l === "CR" || l === "DB");
-                if (typeIndex === -1) return;
-                const tipe = lines[typeIndex];
-                const nominal = lines[typeIndex - 1] || "";
-                if (tipe === "CR") masuk = nominal; else keluar = nominal;
-                for (let i = 0; i < typeIndex; i++) {
-                    const text = lines[i];
-                    if (/^SWITCHING\s+(DB|CR)\s+TRF\s+/i.test(text)) {
-                        const m = text.match(/^SWITCHING\s+(?:DB|CR)\s+TRF\s+(.+?)(?:\s+\d{3}\s+|\s+MYBCA|\s+BCA|$)/i);
-                        if (m) { nama = m[1].trim(); break; }
-                    }
-                    if (/^SWITCHING\s+DB\s+BIAYA/i.test(text)) {
-                        const m = text.match(/BIAYA\s+TXN\s+KE\s+\d+\s+(.+?)(?:\s+MYBCA|\s+BCA|$)/i);
-                        if (m) { nama = m[1].trim(); break; }
-                    }
-                    if (/^TRSF E-BANKING/i.test(text) && /WS\d+/.test(text)) {
-                        const m = text.match(/WS\d+\s+[\d.]+\s+(.+?)$/i);
-                        if (m) { nama = m[1].trim(); break; }
-                    }
-                    if (/^TRSF E-BANKING/i.test(text) && !/WS\d+/.test(text)) {
-                        const m = text.match(/TRSF\s+E-BANKING\s+(?:CR|DB)\s+[\d\/]+\s+\S+\s+(.+?)$/i);
-                        if (m) { nama = m[1].trim(); break; }
-                    }
-                    if (text.includes("TRANSFER DR") || text.includes("TRANSFER KE")) {
-                        const keyword = text.includes("TRANSFER DR") ? "TRANSFER DR" : "TRANSFER KE";
-                        nama = text.split(keyword)[1].trim().replace(/^\d+\s*/, '');
-                        break;
-                    }
-                    if (text.includes("TRFDN-")) { nama = text.replace("TRFDN-", "").trim(); break; }
-                    if (text.length > 3 && !text.match(/^\d+$/) && !text.match(/^\d{1,3}(,\d{3})*\.\d{2}$/) && !text.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
-                        if (lines[i + 1] === "0000" || lines[i + 1] === "0998") { nama = text; break; }
-                    }
-                }
-                const tr = document.createElement('tr');
-                tr.innerHTML = `<td style="font-weight:bold">${nama}</td><td class="nominal-in">${masuk}</td><td class="nominal-out">${keluar}</td>`;
-                tableBodyKlikBCA.appendChild(tr);
-            });
+        if (!val) { tableBodyKlikBCA.innerHTML = ""; return; }
+        tableBodyKlikBCA.innerHTML = "";
+        const blocks = val.split(/\n(?=\d{1,2}\/\d{2}\/\d{4})/);
+        blocks.forEach(block => {
+            const cleanBlock = block.trim();
+            if (cleanBlock.length < 10) return;
+            const lines = cleanBlock.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+            let nama = "TIDAK TERDETEKSI"; let masuk = ""; let keluar = "";
+            const typeIndex = lines.findIndex(l => l === "CR" || l === "DB");
+            if (typeIndex === -1) return;
+            const tipe = lines[typeIndex];
+            const nominal = lines[typeIndex - 1] || "";
+            if (tipe === "CR") masuk = nominal; else keluar = nominal;
+            for (let i = 0; i < typeIndex; i++) {
+                const text = lines[i];
+                if (/^SWITCHING\s+(DB|CR)\s+TRF\s+/i.test(text)) { const m = text.match(/^SWITCHING\s+(?:DB|CR)\s+TRF\s+(.+?)(?:\s+\d{3}\s+|\s+MYBCA|\s+BCA|$)/i); if (m) { nama = m[1].trim(); break; } }
+                if (/^SWITCHING\s+DB\s+BIAYA/i.test(text)) { const m = text.match(/BIAYA\s+TXN\s+KE\s+\d+\s+(.+?)(?:\s+MYBCA|\s+BCA|$)/i); if (m) { nama = m[1].trim(); break; } }
+                if (/^TRSF E-BANKING/i.test(text) && /WS\d+/.test(text)) { const m = text.match(/WS\d+\s+[\d.]+\s+(.+?)$/i); if (m) { nama = m[1].trim(); break; } }
+                if (/^TRSF E-BANKING/i.test(text) && !/WS\d+/.test(text)) { const m = text.match(/TRSF\s+E-BANKING\s+(?:CR|DB)\s+[\d\/]+\s+\S+\s+(.+?)$/i); if (m) { nama = m[1].trim(); break; } }
+                if (text.includes("TRANSFER DR") || text.includes("TRANSFER KE")) { const keyword = text.includes("TRANSFER DR") ? "TRANSFER DR" : "TRANSFER KE"; nama = text.split(keyword)[1].trim().replace(/^\d+\s*/, ''); break; }
+                if (text.includes("TRFDN-")) { nama = text.replace("TRFDN-", "").trim(); break; }
+                if (text.length > 3 && !text.match(/^\d+$/) && !text.match(/^\d{1,3}(,\d{3})*\.\d{2}$/) && !text.match(/^\d{2}\/\d{2}\/\d{4}$/)) { if (lines[i+1]==="0000"||lines[i+1]==="0998"){nama=text;break;} }
+            }
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td style="font-weight:bold">${nama}</td><td class="nominal-in">${masuk}</td><td class="nominal-out">${keluar}</td>`;
+            tableBodyKlikBCA.appendChild(tr);
         });
+    });
 
-        const inputMyBCA = document.getElementById('inputMyBCA');
+    // ===== MY BCA (PERBAIKAN LENGKAP) =====
+    document.getElementById('inputMyBCA').addEventListener('input', function () {
+        const val = this.value.trim();
         const tableBodyMyBCA = document.getElementById('tableBodyMyBCA');
-        inputMyBCA.addEventListener('input', function () {
-            const val = this.value.trim();
-            if (!val) { tableBodyMyBCA.innerHTML = ""; return; }
-            tableBodyMyBCA.innerHTML = "";
-            const blocks = val.split(/\n(?=\d{1,2} [A-Za-z]+ \d{4})/);
-            blocks.forEach(block => {
-                const text = block.trim();
-                if (text.length < 10) return;
-                let nama = "TIDAK TERDETEKSI";
-                let masuk = ""; let keluar = "";
-                const allIDR = [...text.matchAll(/IDR\s*([\d,]+\.\d{2})/g)];
-                const nominal = allIDR.length > 0 ? allIDR[0][1] : "";
-                const isCR = /TRSF E-BANKING CR|BI-FAST CR/i.test(text);
-                const isDB = /TRSF E-BANKING DB|BI-FAST DB/i.test(text);
-                if (isCR) masuk = nominal; else if (isDB) keluar = nominal;
-                if (text.includes("TRFDN-")) {
-                    const m = text.match(/TRFDN-([A-Z0-9\s]+?)(?:\s+ESPAY|\s+IDR|\t|$)/);
-                    if (m) nama = m[1].trim();
-                } else if (/TRANSFER DR\s+\d+/.test(text)) {
-                    const m = text.match(/TRANSFER DR\s+\d+\s+(.+?)(?:\s+IDR|\t|$)/);
-                    if (m) nama = m[1].trim();
-                } else if (/WS\d+/.test(text)) {
-                    const m = text.match(/WS\d+\s+[\d.]+\s+(.+?)(?:\s+IDR|\t|$)/);
-                    if (m) nama = m[1].trim().replace(/\s*\/A\s*$/, '').trim();
-                }
+        if (!val) { tableBodyMyBCA.innerHTML = ""; return; }
+        tableBodyMyBCA.innerHTML = "";
+
+        const blocks = val.split(/\n(?=\d{1,2} [A-Za-z]+ \d{4})/);
+
+        blocks.forEach(block => {
+            const text = block.trim();
+            if (text.length < 10) return;
+
+            let nama = "TIDAK TERDETEKSI";
+            let masuk = ""; let keluar = "";
+
+            // Ambil nominal IDR pertama
+            const allIDR = [...text.matchAll(/IDR\s*([\d,]+\.\d{2})/g)];
+            const nominal = allIDR.length > 0 ? allIDR[0][1] : "";
+
+            // Deteksi CR / DB
+            const isCR = /TRSF E-BANKING CR|BI-FAST CR|SWITCHING CR/i.test(text);
+            const isDB = /TRSF E-BANKING DB|BI-FAST DB|SWITCHING DB/i.test(text);
+            if (isCR) masuk = nominal;
+            else if (isDB) keluar = nominal;
+
+            // POLA 1: TRFDN-
+            if (/TRFDN-/i.test(text)) {
+                const m = text.match(/TRFDN-([A-Z0-9\s]+?)(?:\s+ESPAY|\s+IDR|\t|$)/i);
+                if (m) { nama = m[1].trim(); return appendRow(); }
+            }
+
+            // POLA 2: TRSF E-BANKING dengan WS\d+
+            if (/TRSF E-BANKING/i.test(text) && /WS\d+/i.test(text)) {
+                const m = text.match(/WS\d+\s+[\d.]+\s+(.+?)(?:\s+IDR|\t|$)/i);
+                if (m) { nama = m[1].trim().replace(/\s*\/A\s*$/, '').trim(); return appendRow(); }
+            }
+
+            // POLA 3: TRSF E-BANKING CR/DB tanpa WS (format kode tanggal, misal: 04/17 00TR1 NAMA)
+            if (/TRSF E-BANKING/i.test(text)) {
+                // Format: TRSF E-BANKING CR - 1704/FTSCY/WS95031 28000.00 JUMIYATI
+                const m1 = text.match(/TRSF E-BANKING\s+(?:CR|DB)\s*-\s*[\w\/]+\s+[\d.]+\s+(.+?)(?:\s+IDR|\t|$)/i);
+                if (m1) { nama = m1[1].trim(); return appendRow(); }
+                // Format: TRSF E-BANKING CR - 04/17 00TR1 KADEK MAHA DARMA
+                const m2 = text.match(/TRSF E-BANKING\s+(?:CR|DB)\s*-\s*[\d\/]+\s+\w+\s+(.+?)(?:\s+IDR|\t|$)/i);
+                if (m2) { nama = m2[1].trim(); return appendRow(); }
+            }
+
+            // POLA 4: BI-FAST CR - TRANSFER DR xxx NAMA
+            if (/BI-FAST CR/i.test(text)) {
+                const m = text.match(/TRANSFER DR\s+\d+\s+(.+?)(?:\s+IDR|\t|$)/i);
+                if (m) { nama = m[1].trim(); return appendRow(); }
+                const m2 = text.match(/BI-FAST CR\s*-\s*(.+?)(?:\s+IDR|\t|$)/i);
+                if (m2) { nama = m2[1].trim(); return appendRow(); }
+            }
+
+            // POLA 5: BI-FAST DB - TRANSFER KE / BIAYA TXN
+            if (/BI-FAST DB/i.test(text)) {
+                // TRANSFER KE 009 AHMAD MARZUKI MyBCA
+                const m = text.match(/TRANSFER KE\s+\d+\s+(.+?)(?:\s+MyBCA|\s+IDR|\t|$)/i);
+                if (m) { nama = m[1].trim(); return appendRow(); }
+                // BIAYA TXN KE 009 AHMAD MARZUKI MyBCA
+                const m2 = text.match(/BIAYA TXN KE\s+\d+\s+(.+?)(?:\s+MyBCA|\s+IDR|\t|$)/i);
+                if (m2) { nama = m2[1].trim(); return appendRow(); }
+                // Fallback
+                const m3 = text.match(/BI-FAST DB\s*-\s*(.+?)(?:\s+IDR|\t|$)/i);
+                if (m3) { nama = m3[1].trim(); return appendRow(); }
+            }
+
+            // POLA 6: SWITCHING CR - TRF NAMA xxx
+            if (/SWITCHING CR/i.test(text)) {
+                const m = text.match(/SWITCHING CR\s*-\s*TRF\s+(.+?)(?:\s+\d{3}\s+|\s+MBKBKE|\s+MyBCA|\s+BCA|\s+IDR|$)/i);
+                if (m) { nama = m[1].trim(); return appendRow(); }
+                // Fallback SWITCHING CR
+                const m2 = text.match(/SWITCHING CR\s*-\s*(.+?)(?:\s+IDR|\t|$)/i);
+                if (m2) { nama = m2[1].trim(); return appendRow(); }
+            }
+
+            // POLA 7: SWITCHING DB
+            if (/SWITCHING DB/i.test(text)) {
+                const m = text.match(/TRF\s+(.+?)(?:\s+\d{3}\s+|\s+MyBCA|\s+BCA|\s+IDR|$)/i);
+                if (m) { nama = m[1].trim(); return appendRow(); }
+                const m2 = text.match(/BIAYA TXN KE\s+\d+\s+(.+?)(?:\s+MyBCA|\s+BCA|\s+IDR|$)/i);
+                if (m2) { nama = m2[1].trim(); return appendRow(); }
+            }
+
+            // POLA 8: TRANSFER DR generic
+            if (/TRANSFER DR\s+\d+/.test(text)) {
+                const m = text.match(/TRANSFER DR\s+\d+\s+(.+?)(?:\s+IDR|\t|$)/i);
+                if (m) { nama = m[1].trim(); return appendRow(); }
+            }
+
+            appendRow();
+
+            function appendRow() {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `<td style="font-weight:bold">${nama}</td><td class="nominal-in">${masuk}</td><td class="nominal-out">${keluar}</td>`;
                 tableBodyMyBCA.appendChild(tr);
-            });
+            }
         });
+    });
 
-        async function copyData(tableId) {
-            const body = document.getElementById(tableId);
-            const rows = body.querySelectorAll('tr');
-            if (rows.length === 0) { alert("⚠️ Tidak ada data untuk disalin!"); return; }
-            let output = "";
-            rows.forEach(row => {
-                const rowData = Array.from(row.querySelectorAll('td')).map(c => c.innerText.trim()).join('\t');
-                output += rowData + '\n';
-            });
-            await navigator.clipboard.writeText(output);
-            alert("✅ DATA BERHASIL DISALIN!");
-        }
+    async function copyData(tableId) {
+        const body = document.getElementById(tableId);
+        const rows = body.querySelectorAll('tr');
+        if (rows.length === 0) { alert("⚠️ Tidak ada data untuk disalin!"); return; }
+        let output = "";
+        rows.forEach(row => {
+            const rowData = Array.from(row.querySelectorAll('td')).map(c => c.innerText.trim()).join('\t');
+            output += rowData + '\n';
+        });
+        await navigator.clipboard.writeText(output);
+        alert("✅ DATA BERHASIL DISALIN!");
+    }
     </script>
 </body>
 
